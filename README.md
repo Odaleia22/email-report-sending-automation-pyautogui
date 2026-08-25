@@ -35,11 +35,44 @@ The main goal is to automate the steps of retrieving sales data, analyzing it, a
 6. Gmail is opened and the email is composed automatically.
 7. The email is sent with the final report.
 
-## Requirements
+## Setup
 
-```bash
-pip install pyautogui pandas openpyxl pyperclip
+Antes de executar o projeto, instale o Python 3 e crie um ambiente virtual para
+manter as dependências isoladas do restante do sistema.
+
+### Windows (PowerShell)
+
+No terminal, estando na pasta do projeto, execute:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
+
+Quando o ambiente estiver ativo, o nome `.venv` aparecerá no início da linha do
+terminal. A partir desse momento, execute o notebook `main.ipynb` usando o
+interpretador Python do ambiente virtual.
+
+Para sair do ambiente virtual, execute:
+
+```powershell
+deactivate
+```
+
+### Windows (Prompt de Comando)
+
+```bat
+python -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Se o PowerShell bloquear a ativação por política de execução, abra o terminal
+como usuário e execute `Set-ExecutionPolicy -Scope Process -ExecutionPolicy
+Bypass`; depois tente ativar o ambiente novamente.
 
 ## Notes
 
